@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GLASSES - Loja de óculos premium com frete direto de Cabo Frio, parcelamento sem juros e proteção UV 400.">
+    <meta name="theme-color" content="#0e0e0e">
+    
+    <title>GLASSES - Óculos Premium | Moda e Proteção</title>
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./src/css/base.css">
+    <link rel="stylesheet" href="./src/css/components.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-to-main">Ir para conteúdo principal</a>
+
+    <!-- BANNER MARQUEE -->
+    <div class="banner-marquee" aria-label="Promoções destacadas">
+        <div class="marquee-track">
+            <span class="marquee-item">📦 Envio Direto de Cabo Frio</span>
+            <span class="marquee-item">💳 Parcele em 3x Sem Juros</span>
+            <span class="marquee-item">🛡️ Proteção Solar UV 400</span>
+            <span class="marquee-item">📦 Envio Direto de Cabo Frio</span>
+            <span class="marquee-item">💳 Parcele em 3x Sem Juros</span>
+            <span class="marquee-item">🛡️ Proteção Solar UV 400</span>
+        </div>
+    </div>
+
+    <!-- HEADER/NAVIGATION -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="header__nav">
+                <!-- Logo -->
+                <div class="header__logo">
+                    <a href="index.html" aria-label="Glasses - Voltar para página inicial">
+                        <svg width="120" height="40" viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Texto -->
+                            <text 
+                                x="50%" 
+                                y="180" 
+                                text-anchor="middle" 
+                                dominant-baseline="middle"
+                                fill="#ffffff"
+                                font-size="140"
+                                font-family="Playfair Display, Times New Roman, serif"
+                                letter-spacing="18">
+                                GLASSES
+                            </text>
+
+                            <!-- Linha inferior -->
+                            <line 
+                                x1="400" 
+                                y1="260" 
+                                x2="800" 
+                                y2="260" 
+                                stroke="#ffffff" 
+                                stroke-width="8"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Menu Hamburger Button (Mobile) -->
+                <button class="header__menu-btn" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span class="menu-icon"></span>
+                </button>
+
+                <!-- Navigation Links -->
+                <ul class="header__links" id="nav-menu" role="navigation">
+                    <li><a href="#inicio" class="header__link">Início</a></li>
+                    <li><a href="#promocoes" class="header__link">Promoções</a></li>
+                    <li><a href="#catalogo" class="header__link">Catálogo</a></li>
+                    <li><a href="#guia-rostos" class="header__link">Guia de Rostos</a></li>
+                    <li><a href="#rastreio" class="header__link">Rastreio</a></li>
+                </ul>
+
+                <!-- User Actions -->
+                <div class="header__actions">
+                    <button class="header__action-btn" id="search-btn" aria-label="Abrir busca">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <button class="header__action-btn" id="profile-btn" aria-label="Acessar perfil">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <button class="header__action-btn" id="cart-btn" aria-label="Abrir carrinho de compras">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-badge" id="cart-count">0</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- SEARCH BAR (Hidden by default) -->
+    <div class="search-bar" id="search-bar" hidden>
+        <div class="container">
+            <input type="search" placeholder="Buscar produtos..." class="search-bar__input" id="search-input">
+            <button class="search-bar__close" id="search-close">✕</button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section class="hero" id="inicio" aria-label="Seção em destaque">
+            <div class="hero__content">
+                <h1 class="hero__title">Liquidação de Verão</h1>
+                <p class="hero__subtitle">Nas compras acima de R$ 9.999,99 concorra a 1 Brinde</p>
+                <a href="#catalogo" class="btn btn--primary">Ver Catálogo Completo</a>
+            </div>
+            <div class="hero__image" role="img" aria-label="Banner principal com óculos"></div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="products-section" id="promocoes" aria-labelledby="sale-title">
+            <div class="container">
+                <div class="section-header">
+                    <h2 id="sale-title" class="section-title">Destaques em Promoção</h2>
+                </div>
+                
+                <div class="products-grid" id="products-grid" role="region" aria-label="Produtos em destaque">
+                    <!-- Products loaded dynamically by JavaScript -->
+                </div>
+
+                <div class="section-footer">
+                    <a href="#catalogo" class="btn btn--outline">Ver todos os produtos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- QUALITY BANNER -->
+        <section class="quality-banner" aria-label="Informações de qualidade">
+            <div class="quality-banner__item">
+                <h3>Qualidade Única</h3>
+                <p>Confira nossos produtos de primeira linha</p>
+            </div>
+        </section>
+
+        <!-- CATALOG SECTION -->
+        <section class="catalog-section" id="catalogo" aria-labelledby="catalog-title">
+            <div class="container">
+                <h2 id="catalog-title" class="section-title">Nosso Catálogo</h2>
+                
+                <!-- Catalog Filters/Tabs -->
+                <div class="catalog-filters" role="tablist">
+                    <button class="catalog-filters__btn" role="tab" aria-selected="true" data-filter="novos">
+                        Novos
+                    </button>
+                    <button class="catalog-filters__btn" role="tab" data-filter="colecao">
+                        Coleção Nova
+                    </button>
+                    <button class="catalog-filters__btn" role="tab" data-filter="melhores">
+                        Melhores Vendas
+                    </button>
+                </div>
+
+                <!-- Catalog Products Grid -->
+                <div class="catalog-grid" id="catalog-grid" role="region" aria-label="Produtos do catálogo">
+                    <!-- Catalog items loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEOS SECTION -->
+        <section class="videos-section" id="midias" aria-labelledby="videos-title">
+            <div class="container">
+                <h2 id="videos-title" class="section-title">Vídeos em Destaque</h2>
+                
+                <div class="videos-grid" id="videos-grid" role="region" aria-label="Vídeos de produtos">
+                    <!-- Videos loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- NEWSLETTER SECTION -->
+        <section class="newsletter-section" aria-labelledby="newsletter-title">
+            <div class="container">
+                <h2 id="newsletter-title" class="section-title">Nossas Novidades</h2>
+                <p class="section-subtitle">Seja o primeiro a receber promoções exclusivas e lançamentos!</p>
+                
+                <form class="newsletter-form" id="newsletter-form" method="POST">
+                    <input 
+                        type="text" 
+                        placeholder="Seu nome" 
+                        class="newsletter-form__input" 
+                        id="newsletter-name" 
+                        minlength="3"
+                        required
+                    >
+                    <input 
+                        type="email" 
+                        placeholder="Seu e-mail" 
+                        class="newsletter-form__input" 
+                        id="newsletter-email" 
+                        required
+                    >
+                    <button type="submit" class="btn btn--primary">Inscrever-se</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SOCIAL MEDIA SECTION -->
+        <section class="social-section" aria-labelledby="social-title">
+            <div class="container">
+                <h2 id="social-title" class="section-title">Siga-nos nas Redess</h2>
+                <p id="social-subtitle" class="section-subtitle">Concorra a descontos exclusivos e acompanhe as novidades!</p>
+                
+                <div class="social-grid" id="social-grid" role="region" aria-label="Redes sociais da marca">
+                    <!-- Social media links loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials-section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <h2 id="testimonials-title" class="section-title">Avaliações de Clientes</h2>
+                <p class="section-subtitle">Histórias reais de pessoas com experiências incríveis</p>
+                
+                <div class="testimonials-grid" id="testimonials-grid" role="region" aria-label="Depoimentos de clientes">
+                    <!-- Testimonials loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS SECTION -->
+        <section class="stats-section" aria-label="Estatísticas da empresa">
+            <div class="container">
+                <div class="stat-card">
+                    <h3 class="stat-number">+100.000</h3>
+                    <p class="stat-text">Produtos Vendidos para Todo Brasil</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FACE GUIDE SECTION -->
+        <section class="face-guide-section" id="guia-rostos" aria-labelledby="face-guide-title">
+            <div class="container">
+                <h2 id="face-guide-title" class="section-title">Guia de Rostos</h2>
+                <p class="section-subtitle">Encontre o formato de óculos perfeito para o seu rosto</p>
+                
+                <div class="face-guide-grid" role="region" aria-label="Guia de formatos de rosto">
+                    <!-- Rosto Redondo -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto redondo">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça redonda -->
+                                <circle cx="100" cy="80" r="55" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="70" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="70" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="75" x2="100" y2="95" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 110 Q 100 120 115 110" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Redondo</h3>
+                        <p class="face-guide-card__description">Características: linhas suaves, testa e queixo arredondados</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Óculos angulares ou retangulares</li>
+                            <li>✓ Armações geométricas</li>
+                            <li>✓ Detalhes nas laterais</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rosto Quadrado -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto quadrado">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça quadrada -->
+                                <rect x="60" y="30" width="80" height="90" fill="none" stroke="currentColor" stroke-width="2" rx="5"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="65" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="65" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="70" x2="100" y2="90" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 105 Q 100 115 115 105" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Quadrado</h3>
+                        <p class="face-guide-card__description">Características: mandíbula marcada, testa larga</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Óculos redondos ou ovais</li>
+                            <li>✓ Armações suaves e curvas</li>
+                            <li>✓ Cores pastel ou claras</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rosto Oval -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto oval">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça oval -->
+                                <ellipse cx="100" cy="85" rx="45" ry="60" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="75" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="75" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="80" x2="100" y2="100" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 115 Q 100 125 115 115" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Oval</h3>
+                        <p class="face-guide-card__description">Características: proporções equilibradas, queixo afunilado</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Todos os estilos combinam!</li>
+                            <li>✓ Retangular, redondo ou wayfarer</li>
+                            <li>✓ Formato mais versátil</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rosto Oblongo -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto oblongo">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça oblonga -->
+                                <ellipse cx="100" cy="90" rx="40" ry="65" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="75" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="75" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="80" x2="100" y2="100" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 120 Q 100 130 115 120" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Oblongo</h3>
+                        <p class="face-guide-card__description">Características: mais comprido que largo, queixo alongado</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Óculos de armação larga</li>
+                            <li>✓ Modelos horizontais</li>
+                            <li>✓ Detalhes nas laterais</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rosto Coração -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto em forma de coração">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça em forma de coração -->
+                                <path d="M 100 30 C 80 30 65 45 65 60 C 65 75 100 120 100 120 C 100 120 135 75 135 60 C 135 45 120 30 100 30 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="65" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="65" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="70" x2="100" y2="85" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 100 Q 100 110 115 100" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Coração</h3>
+                        <p class="face-guide-card__description">Características: testa larga, queixo pontudo</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Óculos com armação leve</li>
+                            <li>✓ Modelos com ponte alta</li>
+                            <li>✓ Cores quentes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rosto Losango -->
+                    <div class="face-guide-card">
+                        <div class="face-guide-card__image" role="img" aria-label="Rosto em forma de losango">
+                            <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Cabeça em forma de losango -->
+                                <path d="M 100 25 L 135 85 L 100 135 L 65 85 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <!-- Olhos -->
+                                <circle cx="80" cy="75" r="4" fill="currentColor"/>
+                                <circle cx="120" cy="75" r="4" fill="currentColor"/>
+                                <!-- Nariz -->
+                                <line x1="100" y1="80" x2="100" y2="95" stroke="currentColor" stroke-width="1.5"/>
+                                <!-- Boca -->
+                                <path d="M 85 105 Q 100 115 115 105" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <h3 class="face-guide-card__title">Rosto Losango</h3>
+                        <p class="face-guide-card__description">Características: testa e queixo estreitos, maçãs do rosto largas</p>
+                        <ul class="face-guide-card__list">
+                            <li>✓ Óculos com ponte baixa</li>
+                            <li>✓ Modelos redondos ou ovais</li>
+                            <li>✓ Armações delicadas</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="face-guide-cta">
+                    <p>Não tem certeza sobre seu formato? Converse com nossos especialistas!</p>
+                    <a href="https://api.whatsapp.com/send?phone=SEUTELEFONE" target="_blank" rel="noopener noreferrer" class="btn btn--primary">Fale com um Especialista</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                <!-- Contact Info -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Contato</h3>
+                    <ul class="footer__list">
+                        <li>Segunda à Sexta: 09h às 18h</li>
+                        <li><a href="mailto:glasses@support.com">glasses@support.com</a></li>
+                        <li>Ipanema Mall, S/N - Cabo Frio</li>
+                        <li>West Shopping, S/N - Rio de Janeiro</li>
+                    </ul>
+                </div>
+
+                <!-- Institutional Links -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Institucional</h3>
+                    <ul class="footer__list">
+                        <li><a href="#rastreio">Rastrear Pedido</a></li>
+                        <li><a href="#politicas">Política de Compra</a></li>
+                        <li><a href="#politicas">Política de Reembolso</a></li>
+                        <li><a href="#politicas">Política de Frete</a></li>
+                        <li><a href="#politicas">Política de Privacidade</a></li>
+                        <li><a href="#politicas">Termos de Serviço</a></li>
+                    </ul>
+                </div>
+
+                <!-- FAQ Links -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Dúvidas Frequentes</h3>
+                    <ul class="footer__list">
+                        <li><a href="#faq">Quem somos?</a></li>
+                        <li><a href="#faq">Como limpar meu GLASSES?</a></li>
+                        <li><a href="#faq">Existe modelo certo para meu rosto?</a></li>
+                        <li><a href="#faq">Todos os óculos têm proteção UV?</a></li>
+                        <li><a href="#faq">Posso trocar se não gostar?</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer__bottom">
+                <p>&copy; 2025 GLASSES. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://github.com/JoaoVictorGomesSoares/" target="_blank" rel="noopener noreferrer">João Victor Gomes Soares</a></p>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="footer__payment" role="img" aria-label="Formas de pagamento aceitas">
+                <span>Aceitamos:</span>
+                <img src="./assets/icons/payment-methods.png" alt="Cartões de crédito aceitos">
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALS -->
+    <div class="modal" id="product-modal" hidden>
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Fechar modal">✕</button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./src/js/data.js" defer></script>
+    <script src="./src/js/components.js" defer></script>
+    <script src="./src/js/cart.js" defer></script>
+    <script src="./src/js/main.js" defer></script>
+</body>
+</html>
