@@ -1,16 +1,52 @@
-# GLASSES Ecommerce - Versão 2.0
+# 👓 GLASSES Ecommerce — Versão 2.0 (Frontend)
 
-Projeto ecommerce completamente restruturado e modernizado com boas práticas de desenvolvimento web.
+Projeto de **e-commerce de óculos** completamente reestruturado e modernizado, seguindo **boas práticas de desenvolvimento web**, com foco em **acessibilidade, performance, SEO e escalabilidade**.
+
+Atualmente, o projeto encontra-se na **fase de Frontend**, servindo como base sólida para a implementação do **CRUD completo, autenticação de usuários e fluxo de compras**.
+
+---
 
 ## 🎯 Objetivo
 
-Criar um ecommerce profissional de óculos com:
-- ✅ HTML semântico e acessível
-- ✅ CSS modular e responsivo
-- ✅ JavaScript moderno e funcional
-- ✅ Melhor experiência do usuário
-- ✅ Otimização de performance
-- ✅ SEO-friendly
+Construir um **e-commerce profissional e completo**, incluindo:
+
+- ✅ Interface moderna, acessível e responsiva  
+- ✅ CRUD completo de produtos  
+- 🔒 Autenticação e gerenciamento de usuários  
+- 🛒 Carrinho de compras persistente  
+- 💳 Checkout funcional  
+- 📦 Acompanhamento de pedidos  
+- 📊 Estrutura escalável para back-end e banco de dados  
+
+---
+
+## 🚀 Visão do Projeto (O que ele pretende ser)
+
+O **GLASSES** pretende evoluir para uma aplicação completa de e-commerce, oferecendo:
+
+- Painel de produtos (CRUD)
+- Login e cadastro de usuários
+- Carrinho de compras dinâmico
+- Finalização de pedidos
+- Histórico e acompanhamento de compras
+- Experiência profissional semelhante a lojas reais
+
+---
+
+## 📌 Status Atual
+
+✔️ Frontend completo (HTML, CSS e JavaScript)  
+✔️ Estrutura modular e escalável  
+✔️ Sistema de carrinho no Frontend  
+❌ Autenticação de usuários  
+❌ Integração com backend  
+❌ Banco de dados  
+❌ Checkout real  
+❌ Acompanhamento de pedidos  
+
+📍 **Observação:** No momento, o projeto funciona apenas no lado do cliente (Frontend).
+
+---
 
 ## 📁 Estrutura do Projeto
 
@@ -35,6 +71,36 @@ GLASSES-ecommerce-v2/
 ├── CHANGELOG.md              # Histórico de mudanças
 └── .gitignore               # Arquivos ignorados pelo git
 ```
+
+## 🧩 Funcionalidades Planejadas (Próximas Etapas)
+
+### 🔒 Autenticação de Usuários
+- Cadastro
+- Login e logout
+- Sessões ou JWT
+- Proteção de rotas
+
+### 🛠️ CRUD de Produtos
+- Criar, editar, listar e remover produtos
+- Integração com banco de dados
+- Painel administrativo
+
+### 🛒 Carrinho de Compras (Backend)
+- Persistência por usuário
+- Recuperação de carrinho
+- Validação de estoque
+
+### 💳 Checkout
+- Finalização de compra
+- Geração de pedido
+- Confirmação
+
+### 📦 Acompanhamento de Pedido
+- Status do pedido
+- Histórico de compras
+- Visualização detalhada
+
+---
 
 ## 🚀 Melhorias Principais
 
